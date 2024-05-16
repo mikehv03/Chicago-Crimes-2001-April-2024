@@ -62,23 +62,23 @@ A la relación inicial, es decir, cuando se descarga la base de datos y se elimi
   Siguiendo con las formas normales, se encontraron las siguientes dependencias funcionales, eliminando id:
   
     {case_number} -> {date, block, iucr, primary_type, description, location_description, arrest, domestic, district, ward, community_area, fbi_code, x_coordinate, y_coordinate, updated_on}
-		{iucr} -> {primary_type, description}
+    {iucr} -> {primary_type, description}
   
 Dado que en ambos casos se encontraban iucr, primary_type y description, se analizó cómo transformarla a tercera forma normal. Para lograr esto, se utilizó el Teorema de Heath y la intuición, lo que resultó en las siguientes dos relaciones:
  
     R1 = {case_number, date, block, iucr, location_description, arrest, domestic, district, ward, community_area, fbi_code, x_coordinate, y_coordinate, updated_on}
-	  R2 = {iucr, primary_type, description}
+    R2 = {iucr, primary_type, description}
    
   Una vez se obtuvo la 3NF (tercera forma normal), se buscó si existían dependencias multivaluadas. Inicialmente, se pensó que dentro de la descripción de los IUCR había una dependencia multivaluada; sin embargo, esto no era cierto. Esto se debió a que el tipo de arma utilizada sí dependía del crimen cometido. Por esta razón, teóricamente, ambas relaciones, R1 y R2, ya se encontraban en 4NF (cuarta forma normal).
   
   El problema fue que entre la teoría y la práctica hay un “desacuerdo”. Aunque todas las relaciones estaban en cuarta forma normal, se encontraron ciertos datos que se repetían con frecuencia. Por ejemplo, de los aproximadamente ocho millones de datos, solo existían aproximadamente 370,000 bloques distintos. En location_description, existían solo 105 datos distintos. Y para finalizar, del primary_type de IUCR, se encontraron 33 tipos distintos. Por esta razón, se decidió crear una relación para cada uno de estos datos, para facilitar futuras modificaciones en el nombre de un bloque, delito o localización. Además, es importante mencionar que también se agregó otra relación que reflejaba el nombre de todos los códigos del FBI hasta 2021. Cabe recalcar que la relación de iucr también fue modificada para agregar el atributo de active. Por ello, las relaciones quedaron de la siguiente forma:
   
     crimes = {case_number, date, block_id, iucr_codes_id, fbi_code_id, location_id, arrest,     domestic, police_district, ward, community_area, x_coordinate, y_coordinate, updated_on}
-	  block = {id, description}
-	  location = {id, description}
-	  fbi_code = {fbi_code, description}
-	  iucr_codes = {iucr, primary_type_iucr_id, secondary_description, active}
-	primary_type_iucr = {id, description}
+    block = {id, description}
+    location = {id, description}
+    fbi_code = {fbi_code, description}
+    iucr_codes = {iucr, primary_type_iucr_id, secondary_description, active}
+    primary_type_iucr = {id, description}
 
 ## Códigos
 Los códigos se encuentran en la carpeta "códigos" de este repositorio. Para que el proyecto se ejecute de la manera más adecuada, primero se debe correr el archivo "Creación base raw y limpieza", después "Creación tablas finales e inserción de datos" y, por último, "Consultas para obtener información". Dentro de este archivo se debe seguir el orden en el que aparecen los códigos, empezando por el que se encuentra hasta arriba y terminando con el que se encuentra hasta abajo. Cada código se diferencia por un punto y coma (;).
