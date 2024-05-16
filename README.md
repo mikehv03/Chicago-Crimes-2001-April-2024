@@ -2,12 +2,12 @@
 En este proyecto se limpia, se normaliza y se analizan los datos de los crímenes de Chicago desde el 2001 hasta abril del 2024.
 
 ## Tabla de contenidos
-- [Miembros] (#miembros)
-- [Introducción] (#introducción)
-- [Carga inicial] (#carga inicial)
-- [Limpieza de datos] (#limpieza)
-- [Normalización de la base de datos] (#normalización)
-- [Conclusión] (#conclusión)
+- [Miembros](#miembros)
+- [Introducción](#introduccion)
+- [Carga inicial](#carga-inicial)
+- [Limpieza de datos](#limpieza)
+- [Normalización de la base de datos](#normalizacion)
+- [Conclusión](##conclusion)
 
 ## Miembros
 @mikehv03
