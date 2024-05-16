@@ -24,7 +24,7 @@ En la actualidad, uno de los problemas que más ha llamado la atención es la in
   La base de datos utilizada para este análisis fue creada por el gobierno de Chicago y está disponible en su portal, es decir, en el Chicago Data Portal. En ella se encuentran todos los crímenes registrados por el Departamento de Policía de Chicago desde 2001 hasta abril de 2024, que fue cuando se realizó el análisis. Es importante mencionar que, aunque los datos son del Departamento de Policía de Chicago, gran parte de la información en esta base de datos es preliminar, y el gobierno de Chicago menciona que no se garantiza la exactitud de todos los datos. 
 
 ## Carga inicial
-La base de datos viene del siguiente URL: https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2/about_data
+La base de datos viene de los siguientes URLs: https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2/about_data y https://data.cityofchicago.org/Public-Safety/Chicago-Police-Department-Illinois-Uniform-Crime-R/c7ck-438e/about_data
 
   En la carga inicial de la base de datos, se encontraron aproximadamente ocho millones de tuplas (filas) y un total de veintidós atributos (columnas). Los atributos de Crimes 2001-Present son id, case_number, date, block, iucr, primary_type, description, location_description, arrest, domestic, beat, district, ward, community_area, fbi_code, x_coordinate, y_coordinate, year, updated_on, latitude, longitude, location. 
   
