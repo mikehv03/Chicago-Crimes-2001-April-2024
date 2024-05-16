@@ -7,7 +7,7 @@ En este proyecto se limpia, se normaliza y se analizan los datos de los crímene
 - [Carga inicial](#carga-inicial)
 - [Limpieza de datos](#limpieza-de-datos)
 - [Normalización de la base de datos](#normalizacion-de-la-base-de-datos)
-- [Conclusión](##conclusion)
+- [Conclusión](#conclusion)
 
 ## Miembros
 @mikehv03
