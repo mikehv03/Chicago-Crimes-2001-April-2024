@@ -7,6 +7,7 @@ En este proyecto se limpia, se normaliza y se analizan los datos de los crímene
 - [Carga inicial](#carga-inicial)
 - [Limpieza de datos](#limpieza-de-datos)
 - [Normalización de la base de datos](#normalizacion-de-la-base-de-datos)
+- [Códigos](#codigos)
 - [Conclusión](#conclusion)
 
 ## Miembros
@@ -78,6 +79,9 @@ Dado que en ambos casos se encontraban iucr, primary_type y description, se anal
 	  fbi_code = {fbi_code, description}
 	  iucr_codes = {iucr, primary_type_iucr_id, secondary_description, active}
 	primary_type_iucr = {id, description}
+
+## Códigos
+Los códigos se encuentran en la carpeta "códigos" de este repositorio. Para que el proyecto se ejecute de la manera más adecuada, primero se debe correr el archivo "Creación base raw y limpieza", después "Creación tablas finales e inserción de datos" y, por último, "Consultas para obtener información". Dentro de este archivo se debe seguir el orden en el que aparecen los códigos, empezando por el que se encuentra hasta arriba y terminando con el que se encuentra hasta abajo. Cada código se diferencia por un punto y coma (;).
 
 ## Conclusión
 A lo largo de esta investigación, pudimos descubrir muchas estadísticas que ayudan a comprender el problema de seguridad que se vive actualmente. Para empezar, los crímenes venían disminuyendo año con año a lo largo de aproximadamente una década. Sin embargo, la preocupación de la gente ha aumentado en los últimos dos años, ya que la inseguridad ha repuntado. Las zonas más inseguras de la ciudad están muy relacionadas con las zonas marginadas, es decir, las áreas donde vive la gente con menos recursos son las que padecen mayor inseguridad; esta zona es el sur de Chicago.
